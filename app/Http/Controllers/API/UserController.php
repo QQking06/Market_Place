@@ -55,7 +55,7 @@ class UserController extends Controller
                 'token_type' => 'Bearer',
                 'user' => $user
             ],'Authenticated');
-        } catch (Exception $error) {
+        } catch (\Exception $error) {
             return ResponseFormatter::error([
                 'message' => 'Something went wrong',
                 'error' => $error,
@@ -96,7 +96,7 @@ class UserController extends Controller
                 'token_type' => 'Bearer',
                 'user' => $user
             ],'User Registered');
-        } catch (Exception $error) {
+        } catch (\Exception $error) {
             return ResponseFormatter::error([
                 'message' => 'Something went wrong',
                 'error' => $error,

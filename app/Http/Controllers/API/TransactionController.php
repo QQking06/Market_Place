@@ -104,7 +104,7 @@ class TransactionController extends Controller
             // Redirect ke halaman midtrans
             return ResponseFormatter::success($transaction,'Transaksi berhasil');
         }
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return ResponseFormatter::error($e->getMessage(),'Transaksi Gagal');
         }
     }
